@@ -24,7 +24,11 @@ npm run build
 npx playwright install chromium
 npm test
 ```
+## 🌐 Live Demo Preview
 
+**[🚀 View Live Demo](https://forma-saas-demo.netlify.app/)**
+
+Explore Forma — a modern, responsive SaaS landing page with an interactive project management dashboard.
 Browser tests cover desktop and mobile navigation, horizontal overflow across seven widths (320–1440px), billing changes, signup confirmation, modal Escape/focus restoration, task creation/search/completion/reset, FAQs, and contact forms. Axe checks the page and signup dialog against WCAG A/AA rules. Playwright builds and starts a local production preview on port 4173. A browser download is needed once on a new machine. `npm run preview` serves the production build locally. `npm run format` formats source files with Prettier.
 
 ## Stack and structure
