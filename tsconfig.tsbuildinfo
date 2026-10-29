@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/brand.tsx","./src/components/dialog.tsx","./src/components/productpreview.tsx","./src/components/themetoggle.tsx","./src/data/content.ts","./vite.config.ts","./playwright.config.ts","./tests/landing.spec.ts"],"version":"5.9.3"}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f8fd" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      ;(() => {
+        let preference
+        try {
+          preference = localStorage.getItem('forma-theme')
+        } catch {}
+        const theme =
+          preference === 'light' || preference === 'dark'
+            ? preference
+            : matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light'
+        document.documentElement.dataset.theme = theme
+        document.querySelector('meta[name="theme-color"]').content =
+          theme === 'dark' ? '#0e1422' : '#f7f8fd'
+      })()
+    </script>
+    <meta
+      name="description"
+      content="Meet Forma: a fictional, thoughtfully designed workspace for creative teams. Explore projects, plans, and a hands-on interactive product demo."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Forma — Less busywork. More good work." />
+    <meta
+      property="og:description"
+      content="A little more clarity. A lot more possibility. Explore a fictional workspace for creative teams in this interactive portfolio demo."
+    />
+    <meta property="og:image" content="/social-card.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Forma — Less busywork. More good work.</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
